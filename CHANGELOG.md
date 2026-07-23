@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+- Guided setup now offers to build and launch the desktop companion app as a
+  final step on macOS (menu bar, installed into `~/Applications`) and Linux
+  (tray), with `--with-tray`/`--no-tray` overrides on `install.sh` and
+  `bin/setup`. A missing toolchain or failed build warns and continues; it
+  never fails the router install.
 - Rebuilt the guided setup as a stepped wizard: numbered progress headers, a
   toggleable provider list with live ready/needs-key/needs-sign-in status,
   `a`/`n` select-all/none shortcuts, invalid-input recovery instead of
