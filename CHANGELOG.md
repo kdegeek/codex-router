@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- Added a Qwen provider (`qwen-plan`) for Alibaba Model Studio Token and
+  Coding Plan subscriptions with Qwen3.7 Max and Qwen3.7 Plus picker models,
+  defaulting to the Singapore Token Plan endpoint with an environment override
+  for other regions or plans.
 - Added a Z.ai GLM Coding Plan provider (`zai-coding`) with GLM-5.2 and
   GLM-5-Turbo picker models. Requests use the plan's dedicated coding endpoint,
   enable thinking, map Codex's maximum reasoning tier to Z.ai's `max` effort,
