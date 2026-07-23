@@ -83,6 +83,10 @@ Linux installations support the Codex CLI and the Cursor target's local gateway.
 | GLM-5-Turbo (Coding Plan) | `zai-coding/glm-5-turbo` | Z.ai GLM Coding Plan API key |
 | Qwen3.7 Max (Plan) | `qwen-plan/qwen3.7-max` | Alibaba Model Studio plan API key |
 | Qwen3.7 Plus (Plan) | `qwen-plan/qwen3.7-plus` | Alibaba Model Studio plan API key |
+| GLM-5.2 (Ollama Cloud) | `ollama-cloud/glm-5.2` | Ollama Cloud API key |
+| Kimi K2.7 Code (Ollama Cloud) | `ollama-cloud/kimi-k2.7-code` | Ollama Cloud API key |
+| MiniMax M3 (Ollama Cloud) | `ollama-cloud/minimax-m3` | Ollama Cloud API key |
+| DeepSeek V4 Pro (Ollama Cloud) | `ollama-cloud/deepseek-v4-pro` | Ollama Cloud API key |
 
 The Codex catalog is credential-aware. It includes models only from enabled
 external providers with a stored API key or valid OAuth session. Native GPT
@@ -117,6 +121,11 @@ the Singapore region. Coding Plan subscribers or other regions can point
 `QWEN_PLAN_BASE_URL` at their dashboard-issued base URL. Plan keys use the
 `sk-sp-` prefix and are separate from pay-as-you-go Model Studio keys; Alibaba
 reserves plan endpoints for interactive coding tools.
+
+The Ollama Cloud entries bill through an ollama.com account and can host the
+same model families as other providers under separate quota. Matching entries
+(for example DeepSeek V4 Pro) intentionally coexist with the vendor-direct
+providers because credentials and billing differ.
 
 Only enabled providers appear in an app's picker. Each target has its own
 selection and API-key files:

@@ -90,6 +90,7 @@ API-key providers use hidden prompts:
 ./bin/provider-key anthropic-api set
 ./bin/provider-key zai-coding set
 ./bin/provider-key qwen-plan set
+./bin/provider-key ollama-cloud set
 ```
 
 Grok OAuth uses the official Grok CLI session:
