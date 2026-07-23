@@ -2,6 +2,20 @@
 
 ## Unreleased
 
+- Added interactive model curation: `bin/curate-models PROVIDER` discovers the
+  provider's live model list, lets the user toggle models the registry does
+  not ship, and stores them as protected local user models with conservative
+  default metadata. User models overlay the registry at load time; invalid or
+  colliding entries are skipped with warnings instead of failing the router,
+  and the command can rebuild routes and restart the service on request.
+- Rebuilt the guided setup as a stepped wizard: numbered progress headers, a
+  toggleable provider list with live ready/needs-key/needs-sign-in status,
+  `a`/`n` select-all/none shortcuts, invalid-input recovery instead of
+  aborting, color when the terminal supports it (respecting `NO_COLOR`), and a
+  review summary with explicit confirmation before anything is installed.
+- Guided Codex setup can now onboard Grok OAuth (and offers to `npm install`
+  a missing official provider CLI), matching what the Cursor setup and tray
+  already supported.
 - Added an Ollama Cloud provider (`ollama-cloud`) with GLM-5.2, Kimi K2.7
   Code, MiniMax M3, and DeepSeek V4 Pro picker models, using ollama.com's
   OpenAI-compatible API with an account API key and context windows read from
