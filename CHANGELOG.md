@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+- Guided setup now offers to build and launch the desktop companion app as a
+  final step on macOS (menu bar, installed into `~/Applications`) and Linux
+  (tray), with `--with-tray`/`--no-tray` overrides on `install.sh` and
+  `bin/setup`. A missing toolchain or failed build warns and continues; it
+  never fails the router install.
 - Added interactive model curation: `bin/curate-models PROVIDER` discovers the
   provider's live model list, lets the user toggle models the registry does
   not ship, and stores them as protected local user models with conservative

@@ -78,6 +78,14 @@ ready/needs-key/needs-sign-in status per provider, credential onboarding for
 anything you selected that is not connected yet, and a review summary before
 any change is made.
 
+On macOS and Linux, guided setup then offers to build and launch the desktop
+companion (the macOS menu bar app or the Windows/Linux tray). `--with-tray`
+installs it without asking, `--no-tray` never offers it, and automatic mode
+skips it. On macOS the app bundle is placed in `~/Applications` and needs the
+Swift toolchain; a missing toolchain skips the step with guidance instead of
+failing setup. Windows still builds the tray manually with
+`scripts/build-desktop-tray.ps1`.
+
 ## Authentication choices
 
 Kimi Code OAuth reuses the official CLI session. Guided setup offers to run the
