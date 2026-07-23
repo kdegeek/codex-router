@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- Added a Z.ai GLM Coding Plan provider (`zai-coding`) with GLM-5.2 and
+  GLM-5-Turbo picker models. Requests use the plan's dedicated coding endpoint,
+  enable thinking, map Codex's maximum reasoning tier to Z.ai's `max` effort,
+  and drop sampling overrides that conflict with thinking mode.
 - Added a reversible tray toggle that lets signed-out Codex CLI/App sessions
   use connected external providers through a managed custom model provider,
   while preserving ChatGPT credentials and restoring the prior provider mode.
