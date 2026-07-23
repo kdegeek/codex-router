@@ -13,6 +13,13 @@
   after each entry, challenges input that looks like the same key pasted
   twice before saving, and re-prompts instead of failing on empty input, so a
   paste with terminal echo disabled is no longer a silent leap of faith.
+- Added a Z.ai vendor quota adapter: when a `zai-coding` provider is
+  configured, account usage now reports real plan windows (5-hour, weekly,
+  token quota) with reset times from Z.ai's key-authenticated quota API,
+  plus a dashboard link. Alibaba plan and Ollama Cloud accounts stay
+  local-only by design — their vendor dashboards are session-gated and the
+  router never imports browser cookies — but now carry a `dashboardUrl` so
+  companion UIs can deep-link to the official usage pages.
 - Added a reversible tray toggle that lets signed-out Codex CLI/App sessions
   use connected external providers through a managed custom model provider,
   while preserving ChatGPT credentials and restoring the prior provider mode.
