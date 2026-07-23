@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- Canceling a generation (or any client disconnect mid-request) no longer
+  flips router health into the eight-second error state, so tray and island
+  status indicators stop flashing red on ordinary cancels. Errors the router
+  or an upstream actually produced still surface.
 - The Dynamic Island setting is now a three-way mode: Off, Notch (the
   existing top-of-screen overlay), or Desktop — a draggable widget-style
   panel pinned just above the desktop icons that always shows live router
