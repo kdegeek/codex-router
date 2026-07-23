@@ -37,6 +37,10 @@
   after each entry, challenges input that looks like the same key pasted
   twice before saving, and re-prompts instead of failing on empty input, so a
   paste with terminal echo disabled is no longer a silent leap of faith.
+- Service startup failures now include the underlying bounded, non-sensitive
+  error message (for example which health check timed out or which service
+  exited early) instead of a generic failure line.
+
 - Added a reversible tray toggle that lets signed-out Codex CLI/App sessions
   use connected external providers through a managed custom model provider,
   while preserving ChatGPT credentials and restoring the prior provider mode.
