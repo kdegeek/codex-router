@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+- Added a Z.ai vendor quota adapter: when a `zai-coding` provider is
+  configured, account usage now reports real plan windows (5-hour, weekly,
+  token quota) with reset times from Z.ai's key-authenticated quota API,
+  plus a dashboard link. Alibaba plan and Ollama Cloud accounts stay
+  local-only by design — their vendor dashboards are session-gated and the
+  router never imports browser cookies — but now carry a `dashboardUrl` so
+  companion UIs can deep-link to the official usage pages.
 - Guided setup now offers to build and launch the desktop companion app as a
   final step on macOS (menu bar, installed into `~/Applications`) and Linux
   (tray), with `--with-tray`/`--no-tray` overrides on `install.sh` and
